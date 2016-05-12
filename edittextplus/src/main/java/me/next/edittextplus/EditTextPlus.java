@@ -123,8 +123,8 @@ public class EditTextPlus extends EditText {
 
     private void setBounds(Drawable drawable) {
         drawable.setBounds(0, 0,
-                drawable.getIntrinsicWidth() / 2,
-                drawable.getIntrinsicHeight() / 2);
+                drawable.getIntrinsicWidth(),
+                drawable.getIntrinsicHeight());
     }
 
     private void initResource(Context context, AttributeSet attrs) {
