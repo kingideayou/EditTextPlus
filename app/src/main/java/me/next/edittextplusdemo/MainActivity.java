@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
         editTextPlusClickable.setOnButtonClickListener(new EditTextPlus.OnButtonClickListener() {
             @Override
             public void onButtonClick() {
+                editTextPlusClickable.setText("");
                 Toast.makeText(getApplicationContext(), "click button", Toast.LENGTH_SHORT).show();
             }
         });
