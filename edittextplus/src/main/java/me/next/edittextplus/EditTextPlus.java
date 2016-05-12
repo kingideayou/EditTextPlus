@@ -75,14 +75,14 @@ public class EditTextPlus extends EditText {
                             mOnButtonClickListener.onButtonClick();
                         }
                     } else if (editTextType == EditTextPlusType.CHECKABLE.ordinal()) {
+                        if (isChecked()) {
+                            setInputType(129);//hide password
+                        } else {
+                            setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+                        }
+                        setButtonVisible(true);
                         if (mOnButtonCheckListener != null) {
-                            if (isChecked()) {
-                                setInputType(129);//hide password
-                            } else {
-                                setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
-                            }
                             mOnButtonCheckListener.onButtonCheck(isChecked());
-                            setButtonVisible(true);
                         }
                     }
                     return true;
