@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="EditTextPlus">
+        <attr name="button_img_normal" format="reference"/>
+        <attr name="button_img_pressed" format="reference"/>
+        <attr name="button_img_checked" format="reference"/>
+        <attr name="etp_type" format="enum">
+            <enum name="normal" value="0"/>
+            <enum name="clickable" value="1"/>
+            <enum name="checkable" value="2"/>
+        </attr>
+    </declare-styleable>
+</resources>
