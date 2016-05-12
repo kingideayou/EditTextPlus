@@ -91,6 +91,18 @@ public class EditTextPlus extends EditText {
                 }
             }
         });
+        this.setOnFocusChangeListener(new OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View view, boolean hasFocus) {
+                if (editTextType == EditTextPlusType.CLICKABLE.ordinal()) {
+                    if (hasFocus) {
+                        setButtonVisible(true);
+                    } else {
+                        setButtonVisible(false);
+                    }
+                }
+            }
+        });
         this.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
